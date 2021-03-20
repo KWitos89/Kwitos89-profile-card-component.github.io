@@ -9,19 +9,48 @@ body {
   position: relative;
   overflow: hidden;
 
-  background-image: url(../../images/bg-pattern-bottom.svg),
-                    url(../../images/bg-pattern-top.svg);
-  background-repeat: no-repeat;
-  background-position: bottom -25rem right -5rem,top -25rem left -5rem;
-  background-size: 60vw;
-
-  @media (max-width:56em){
-
-    background-position: bottom -2rem  right -2rem, top -2rem  left -2rem;
+  @media (max-width:415px){
+    overflow: hidden;
   }
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-35%, -50%);
+  z-index: -1;
+
+  @media (max-width:415px){
+    top: 0;
+    left: -450px;
+  }
+
+  @media (max-width:900px){
+    top: 0;
+    left: -300px;
+  }
+}
+.bottom{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(30% , 64%);
+  z-index: -1;
+
+
+  @media (max-width:415px){
+    bottom:70px;
+    right:-450px;
+  }
+
+  @media (max-width:900px){
+    bottom: 70px;
+    right: -300px;
+  }
 }

@@ -19,15 +19,11 @@ body {
   max-width: 90em;
   position: relative;
   overflow: hidden;
-  background-image: url(../../images/bg-pattern-bottom.svg), url(../../images/bg-pattern-top.svg);
-  background-repeat: no-repeat;
-  background-position: bottom -25rem right -5rem,top -25rem left -5rem;
-  background-size: 60vw;
 }
 
-@media (max-width: 56em) {
+@media (max-width: 415px) {
   body {
-    background-position: bottom -2rem  right -2rem, top -2rem  left -2rem;
+    overflow: hidden;
   }
 }
 
@@ -36,10 +32,56 @@ a {
   text-decoration: none;
 }
 
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-35%, -50%);
+          transform: translate(-35%, -50%);
+  z-index: -1;
+}
+
+@media (max-width: 415px) {
+  .top {
+    top: 0;
+    left: -450px;
+  }
+}
+
+@media (max-width: 900px) {
+  .top {
+    top: 0;
+    left: -300px;
+  }
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translate(30%, 64%);
+          transform: translate(30%, 64%);
+  z-index: -1;
+}
+
+@media (max-width: 415px) {
+  .bottom {
+    bottom: 70px;
+    right: -450px;
+  }
+}
+
+@media (max-width: 900px) {
+  .bottom {
+    bottom: 70px;
+    right: -300px;
+  }
+}
+
 :root {
   /* fonts */
   --ff:'Kumbh Sans', sans-serif;
-  --fs-name:1.125em;
+  --fs-name:1.125rem;
   --fs-small:0.6875rem;
   /* colors */
   --clr-bg:hsl(185, 75%, 39%);
