@@ -9,8 +9,8 @@ body {
   position: relative;
   overflow: hidden;
 
-  background-image: url(/images/bg-pattern-bottom.svg),
-                    url(/images/bg-pattern-top.svg);
+  background-image: url(../../images/bg-pattern-bottom.svg),
+                    url(../../images/bg-pattern-top.svg);
   background-repeat: no-repeat;
   background-position: bottom -25rem right -5rem,top -25rem left -5rem;
   background-size: 60vw;
